@@ -28,8 +28,8 @@ void UserRole::AddAccessRight(QString name)
 OperatorRole::OperatorRole()
 {
 	AddAccessRight("newwindow");
-	AddAccessRight("button1");
-	AddAccessRight("button2");
+	AddAccessRight("level1");
+	AddAccessRight("level2");
 }
 
 QString OperatorRole::GetName()
@@ -40,8 +40,8 @@ QString OperatorRole::GetName()
 
 TechnicianRole::TechnicianRole()
 {
-	AddAccessRight("button3");
-	AddAccessRight("button4");
+	AddAccessRight("level3");
+	AddAccessRight("level4");
 }
 
 QString TechnicianRole::GetName()
@@ -52,8 +52,8 @@ QString TechnicianRole::GetName()
 
 EngeneerRole::EngeneerRole()
 {
-	AddAccessRight("button5");
-	AddAccessRight("button6");
+	AddAccessRight("level5");
+	AddAccessRight("level6");
 }
 
 QString EngeneerRole::GetName()

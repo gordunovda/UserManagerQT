@@ -2,7 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.2
 
-ApplicationWindow  {
+ApplicationWindow {
     id: mainwindow
     visible: true
     width: 400
@@ -12,17 +12,17 @@ ApplicationWindow  {
     Connections {
         target: userController
         onUserChanged: {
-            button6.visible = userController.IsAllow("button6")
-            button5.visible = userController.IsAllow("button5")
-            button4.visible = userController.IsAllow("button4")
-            button3.visible = userController.IsAllow("button3")
-            button2.visible = userController.IsAllow("button2")
-            button1.visible = userController.IsAllow("button1")
+            button6.visible = userController.IsAllow("level6")
+            button5.visible = userController.IsAllow("level5")
+            button4.visible = userController.IsAllow("level4")
+            button3.visible = userController.IsAllow("level3")
+            button2.visible = userController.IsAllow("level2")
+            button1.visible = userController.IsAllow("level1")
             newWindowButton.visible = userController.IsAllow("newwindow")
 
         }
     }
-    
+
     NewWindow {
         id:popupWindow
     }
@@ -42,7 +42,7 @@ ApplicationWindow  {
 
             Button {
                 id: button
-                text: "Enter"
+                text: "Войти"
                 onClicked: {
                     userController.ChangePassword(passwordField.text)
                 }
@@ -96,7 +96,7 @@ ApplicationWindow  {
                 text: "Новое окно"
                 visible: false
                 onClicked: {
-                   popupWindow.visible = true;
+                    popupWindow.visible = true;
                 }
             }
         }
